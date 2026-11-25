@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Opened Page</title></head>
+<body>
+  <h2>Opened Page</h2>
+  <p id="res"></p>
+  <script>
+    console.log("window.opener =", window.opener);
+    document.getElementById("res").textContent =
+      window.opener ? "VULNERABLE: window.opener is accessible!" : "SAFE: window.opener is null.";
+  </script>
+</body>
+</html>
